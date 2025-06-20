@@ -13,3 +13,21 @@ I used SciPy’s minimize() function with BFGS method and a custom callback to t
 
 ### Debugging and Explanation
 I analyzed the differences between manual and SciPy-based approaches and explained key mathematical concepts like gradient signs and the role of x in updates.
+
+## 2. Mariam Issah
+
+###
+
+###
+
+## 3. Innocente Aline
+
+###
+
+###
+
+## 4. David zuokumor 
+
+###
+
+###
