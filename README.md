@@ -12,13 +12,15 @@ I created clear Matplotlib plots to show how the slope (m), intercept (b), and e
 I used SciPy’s minimize() function with BFGS method and a custom callback to track and print updates during optimization.
 
 ## 2. Mariam Issah
+ I implemented and explained the Exponential Distribution in Python using the scenario David gave in the group discussion.  
 
 ### Exponential Distribution
 
 ## Real World Example
-We were given four major tasks to complete, and as a group, we shared these tasks among ourselves, tackling one question at a time. Before starting any coding or calculations, we all took the time to understand what each part of the assignment was about. Since every group member works at a different pace, the time it takes each person to finish their part varies.
-
-We assumed that, on average, a member takes 30 minutes (0.5 hours) to complete a question. This gives a rate λ = 2 per hour. We implemented the PDF and CDF formulas manually and visualized them using Matplotlib.
+In this assignment, we are given four questions, and my group has to tackle one question at a time to make sure that everyone understands what we are doing. Suppose each group member takes on average 2 hours to fully understand and complete their assigned question. The time taken to understand a question varies, but follows a random and independent pattern.
+ What is the probability that a group member completes a question in 1 hour or less?
+ 
+We assumed that, on average, a member takes 60 minutes (1 hours) to complete a question. This gives a rate λ = 2 per hour. We implemented the PDF and CDF formulas manually and visualized them using Matplotlib.
 
 PDF (
 𝑓
@@ -31,6 +33,7 @@ PDF (
 −
 𝜆
 𝑥
+
 f(x)=λe 
 −λx
  ) shows that quicker completions are more likely.
@@ -47,6 +50,7 @@ CDF (
 −
 𝜆
 𝑥
+
 F(x)=1−e 
 −λx
  ) shows the growing chance of completion over time.
