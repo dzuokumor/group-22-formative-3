@@ -58,7 +58,7 @@ F(x)=1−e
 The exponential process is useful here because it models the time between independent events (question completions) and assumes a memoryless process — how long we've been working doesn't affect how soon we finish.
 
 This helped us understand how the distribution works in real life and how to code and visualize it from scratch.
-
+The theoretical derivation and extended exploration by David informed my implementation.
 ## 3. Innocente Aline
 
 In this section, I demonstrate Bayesian inference using a COVID-19 testing scenario:
@@ -86,3 +86,27 @@ In this section, I demonstrate Bayesian inference using a COVID-19 testing scena
 
 ### Debugging and Explanation
 I analyzed the differences between manual and SciPy-based approaches and explained key mathematical concepts like gradient signs and the role of x in updates.
+
+### Extension of the Exponential Distribution
+
+I reinforced the group's understanding of the **exponential distribution** by validating its cumulative behavior through analytical derivation and manual computation. Using the **cumulative distribution function (CDF)** formula:
+
+I verified the probability of a group member completing a question in 1 hour, given a rate λ = 0.5:
+```
+F(x) = 1 - e^(-λx)
+```
+
+```
+P(X ≤ 1) = 1 - e^(-0.5 * 1)
+         ≈ 1 - 0.6065
+         = 0.3935
+```
+To demonstrate its behavior in practice, I used the probability density function (PDF) and cumulative distribution function (CDF) only in Python, approximating e ≈ 2.71828. This allowed me to achieve numerical accuracy without using external libraries such as math, demonstrating how the exponential curve emerges from first principles.
+
+I also explored the memoryless property of the exponential distribution:
+
+```
+P(X > s + t | X > s) = P(X > t)
+```
+
+This basic property separates the exponential distribution from others like the Normal, Binomial, or Poisson distributions. It makes the exponential model highly suitable for modeling the time between independent events, e.g., response time, service time, or failure of a system.
